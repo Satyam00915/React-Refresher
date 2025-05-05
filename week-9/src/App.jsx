@@ -2,6 +2,7 @@ import { Children, useEffect, useState } from "react";
 import "./App.css";
 import { EffectUnmount } from "./Topics/EffectUnmount";
 import { ChildrenProp } from "./Topics/ChildrenProp";
+import ErrorBoundaryCard from "./Topics/ErrorBoundary";
 
 function App() {
   return (
@@ -11,7 +12,11 @@ function App() {
         {/* <EffectUnmount /> */}
 
         {/*Children Prop */}
-        <ChildrenProp />
+        {/* <ChildrenProp /> */}
+
+
+        {/* Error Boundary */}
+        {/* <ErrorBoundaryCard /> */}
       </div>
     </>
   );
