@@ -1,17 +1,13 @@
 import { useEffect } from "react";
-import {
-  BrowserRouter,
-  Route,
-  Routes,
-  useNavigate,
-} from "react-router-dom";
+import { BrowserRouter, Route, Routes, useNavigate } from "react-router-dom";
 import { Layout } from "./Pages/Layout";
+import { Ref } from "./Pages/Ref";
+import Practice from "./Pages/Practice";
 
 function App() {
   return (
     <div>
-      
-      <BrowserRouter>
+      {/* <BrowserRouter>
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route path="/neet/class-11" element={<Class11Program />} />
@@ -20,7 +16,10 @@ function App() {
             <Route path="*" element={<ErrorPage />} />
           </Route>
         </Routes>
-      </BrowserRouter>
+      </BrowserRouter> */}
+
+      {/* <Ref /> */}
+      <Practice />
     </div>
   );
 }
