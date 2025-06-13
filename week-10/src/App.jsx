@@ -3,6 +3,9 @@ import { BrowserRouter, Route, Routes, useNavigate } from "react-router-dom";
 import { Layout } from "./Pages/Layout";
 import { Ref } from "./Pages/Ref";
 import Practice from "./Pages/Practice";
+import Practice2 from "./Pages/Practice2";
+import Navigator from "./Pages/Navigator";
+import { State } from "./StateManage/State";
 
 function App() {
   return (
@@ -19,7 +22,10 @@ function App() {
       </BrowserRouter> */}
 
       {/* <Ref /> */}
-      <Practice />
+      {/* <Practice /> */}
+      {/* <Practice2 /> */}
+      {/* <Navigator /> */}
+      <State />
     </div>
   );
 }
