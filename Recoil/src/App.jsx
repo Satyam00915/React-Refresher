@@ -1,12 +1,13 @@
 import React from "react";
 import { CounterContext, CounterProvider } from "./Context/Context";
 import { useRecoilValue, useSetRecoilState } from "recoil";
-import { counterAtom } from "./Atoms/Atom";
+import { counterAtom, evenSelector } from "./Atoms/Atom";
 
 const App = () => {
   return (
     <div>
       <Counter />
+      <IsEven />
       <Increase />
       <Decrease />
     </div>
@@ -15,6 +16,10 @@ const App = () => {
 
 export default App;
 
+function IsEven() {
+  const even = useRecoilValue(evenSelector);
+  return <div>{even ? "Even" : "Odd"}</div>;
+}
 function Counter() {
   // const { count } = useContext(CounterContext);
   const count = useRecoilValue(counterAtom);
@@ -27,7 +32,7 @@ function Decrease() {
   return (
     <button
       onClick={() => {
-        setCount((c) => c - 1);
+        setCount((c) => c - 2);
       }}
     >
       Decrease
@@ -42,7 +47,7 @@ function Increase() {
   return (
     <button
       onClick={() => {
-        setCount((c) => c + 1);
+        setCount((c) => c + 2);
       }}
     >
       Increase
